@@ -1,0 +1,45 @@
+<html>
+<head>
+	<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+	<title>Wall of Tweets 6.03</title>
+	<link href="wallstyle.css" rel="stylesheet" type="text/css" />
+	<script src="prototype.js" language="JavaScript" type="text/javascript"></script>
+	<script type="text/javascript" language="JavaScript">
+		function likeHandler(tweetID) {
+			var target = 'tweet_likes_'+tweetID;
+			var uri = 'update?twid='+tweetID
+			var butid = 'button_'+tweetID;
+			var req = new XMLHttpRequest();
+			req.open('GET', uri, true);
+			req.onreadystatechange = function() {
+			    if (req.readyState == 4 && req.status==200) {
+			        document.getElementById(target).innerHTML = req.responseText;
+			        document.getElementById(butid).disabled = true;
+			    }
+			};
+			req.send(null);
+		}
+	</script>
+</head>
+<body class="wallbody">
+
+<div class ="login">
+<form action = "update" method="post">
+		username: <input name="login_username" size=20>
+		password: <input name="login_password" type="password" size=20>
+		<input type="submit" name="action" value="login">
+</form>
+</div>
+
+<div class ="heading">
+	<h1 class="walltitle">Wall of Tweets 6.03</h1>
+    <p><strong><a href="user_registration.html">Click Here To Register</a></strong></p>
+</div>
+
+#*
+
+      Display wall tweets
+
+*#
+</body>
+</html>

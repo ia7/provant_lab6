@@ -1,0 +1,117 @@
+09-27 15:43:16 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "POSTS[*] SELECT * FROM POSTERS"; se esperaba "PREPARE, {"
+Syntax error in SQL statement "POSTS[*] SELECT * FROM POSTERS"; expected "PREPARE, {"; SQL statement:
+POSTS SELECT * FROM POSTERS [42001-142]
+03-02 11:13:33 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "POSTS" no encontrada
+Table "POSTS" not found; SQL statement:
+select p.*, u.perNAME from posts p natural join posters u order by pTIME desc [42102-147]
+03-02 11:27:41 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TWEETS" no encontrada
+Table "TWEETS" not found; SQL statement:
+update tweets set wtLIKES = wtLIKES + 1 where wtID = 6 [42102-147]
+03-02 11:27:43 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TWEETS" no encontrada
+Table "TWEETS" not found; SQL statement:
+update tweets set wtLIKES = wtLIKES + 1 where wtID = 5 [42102-147]
+03-02 11:27:45 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TWEETS" no encontrada
+Table "TWEETS" not found; SQL statement:
+update tweets set wtLIKES = wtLIKES + 1 where wtID = 4 [42102-147]
+09-27 15:49:43 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Imposible interpretar la constante de fecha y hora timestamp "0000-00-00 00:00:00", causa: "java.lang.IllegalArgumentException: MONTH"
+Cannot parse timestamp constant "0000-00-00 00:00:00", cause: "java.lang.IllegalArgumentException: MONTH"; SQL statement:
+insert  into tweets values (1,1,'A cynic is a man who, when he smells flowers, looks around for a coffin.',310,'2011-09-14 08:35:32'),(2,2,'No married man is genuinely happy if he has to drink worse whisky than he used to drink when he was single.',207,'2011-09-14 07:22:32'),(3,1,'Before a man speaks it is always safe to assume that he is a fool. After he speaks, it is seldom necessary to assume it.',51,'2011-09-13 20:35:32'),(4,2,'Adultery is the application of democracy to love.',68,'2011-09-12 15:01:32'),(5,2,'A judge is a law student who marks his own examination papers. ',156,'2011-09-12 11:31:32'),(6,1,'For every complex problem there is an answer that is clear, simple, and wrong.',74,'2011-09-11 21:55:32'),(7,8,'Hola soc el Lars',80,'2011-09-14 10:03:59'),(8,7,'captcha ok',3,'2011-09-14 10:12:05'),(9,9,'Entra?',4,'2011-09-14 10:13:59'),(10,10,'111111111111111111111111',3,'2011-09-14 10:15:43'),(11,10,'eeeeeeeeeeeeeeeeeeeeee',6,'2011-09-14 10:16:45'),(12,11,'hola hola hola',1,'2011-09-14 10:22:34'),(13,12,'hola hola adeu adeu',1,'2011-09-14 10:23:17'),(14,11,'probant repe user',1,'2011-09-14 10:23:30'),(15,11,'&lt;script&gt;alert();&lt;/script&gt;',2,'2011-09-14 10:24:22'),(16,13,'Hello again!',1,'2011-09-14 10:28:41'),(17,17,'va?',1,'2011-09-14 10:29:19'),(18,16,'',1,'2011-09-14 10:29:22'),(19,15,'Hola muy buenas!',1,'2011-09-14 10:29:33'),(20,13,'Hello againx2!',0,'2011-09-14 10:29:34'),(21,18,'Hola!',0,'2011-09-14 10:29:58'),(22,9,'Captcha ok',1,'2011-09-14 10:31:34'),(23,17,'Qui soc?',1,'2011-09-14 10:32:22'),(24,10,'1111111111111111111111',2,'2011-09-14 10:33:23'),(25,10,'3333333333333333333333',1,'2011-09-14 10:34:12'),(26,11,'sisisisisisiss',2,'2011-09-14 10:34:35'),(27,11,'probantttttttt',3,'2011-09-14 10:35:43'),(28,22,'Hola mmmm',2,'2011-09-14 10:36:31'),(29,10,'1111111111111111111111111',1,'2011-09-14 10:37:09'),(30,10,'1111111111111111111111',0,'2011-09-14 10:37:53'),(31,10,'ffffffffffffffffffffffffffffffffffffffffffffff',1,'2011-09-14 10:38:17'),(32,20,'blank',2,'2011-09-14 10:38:56'),(33,24,'',0,'2011-09-14 10:41:40'),(34,19,'holalal',0,'0000-00-00 00:00:00'),(35,13,'Testing captcha!',0,'2011-09-14 10:42:03'),(36,19,'holalal',0,'0000-00-00 00:00:00'),(37,25,'prova prova',0,'0000-00-00 00:00:00'),(38,25,'lalalalala',0,'0000-00-00 00:00:00'),(39,26,'hola',0,'2011-09-14 10:46:16'),(40,26,'jajaja',0,'2011-09-14 10:46:41'),(41,25,'lalalala',0,'2011-09-14 10:47:16'),(42,20,'teeeexto',2,'2011-09-14 10:48:44'),(43,10,'1111111111111111111111111',1,'2011-09-14 10:52:09'),(44,10,'2222222222222222222222222222222222',0,'2011-09-14 10:53:13'),(45,25,'captcha la',0,'2011-09-14 10:58:09'),(46,25,'fsdfsagsdh',0,'2011-09-14 10:59:21'),(47,27,'h',0,'2011-09-14 11:02:13') -- row #34 (34, 19, 'holalal', 0, '0000-00-00 00:00:00') [90011-147]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:156)
+	at org.h2.util.DateTimeUtils.parseDateTime(DateTimeUtils.java:346)
+	at org.h2.value.ValueTimestamp.parseTimestamp(ValueTimestamp.java:82)
+	at org.h2.value.Value.convertTo(Value.java:804)
+	at org.h2.table.Column.convert(Column.java:146)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:114)
+	at org.h2.command.dml.Insert.update(Insert.java:86)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:69)
+	at org.h2.command.Command.executeUpdate(Command.java:201)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:178)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:153)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1004)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:970)
+	at org.h2.server.web.WebThread.process(WebThread.java:166)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalArgumentException: MONTH
+	at java.util.GregorianCalendar.computeTime(Unknown Source)
+	at java.util.Calendar.updateTime(Unknown Source)
+	at java.util.Calendar.getTimeInMillis(Unknown Source)
+	at java.util.Calendar.getTime(Unknown Source)
+	at org.h2.util.DateTimeUtils.getTime(DateTimeUtils.java:375)
+	at org.h2.util.DateTimeUtils.parseDateTime(DateTimeUtils.java:303)
+	... 16 more
+09-27 16:21:34 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Columna "U.SNAME" no encontrada
+Column "U.SNAME" not found; SQL statement:
+select t.*, u.sNAME from tweets t natural join users u order by twTIME desc [42122-147]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:126)
+	at org.h2.command.dml.Select.prepare(Select.java:773)
+	at org.h2.command.Parser.prepare(Parser.java:202)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1056)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:71)
+	at wallOfTweets.WoTBrowser.doGet(WoTBrowser.java:83)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:627)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:269)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:188)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:213)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:172)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:117)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:108)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:174)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:875)
+	at org.apache.coyote.http11.Http11BaseProtocol$Http11ConnectionHandler.processConnection(Http11BaseProtocol.java:665)
+	at org.apache.tomcat.util.net.PoolTcpEndpoint.processSocket(PoolTcpEndpoint.java:528)
+	at org.apache.tomcat.util.net.LeaderFollowerWorkerThread.runIt(LeaderFollowerWorkerThread.java:81)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:689)
+	at java.lang.Thread.run(Unknown Source)
+10-23 18:18:26 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Función "DATE_ADD" no encontrada
+Function "DATE_ADD" not found; SQL statement:
+UPDATE tweets SET twtime = DATE_ADD(twtime , INTERVAL 1 YEAR) [90022-147]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.command.Parser.readJavaFunction(Parser.java:2052)
+	at org.h2.command.Parser.readFunction(Parser.java:2096)
+	at org.h2.command.Parser.readTerm(Parser.java:2391)
+	at org.h2.command.Parser.readFactor(Parser.java:1978)
+	at org.h2.command.Parser.readSum(Parser.java:1965)
+	at org.h2.command.Parser.readConcat(Parser.java:1938)
+	at org.h2.command.Parser.readCondition(Parser.java:1803)
+	at org.h2.command.Parser.readAnd(Parser.java:1784)
+	at org.h2.command.Parser.readExpression(Parser.java:1776)
+	at org.h2.command.Parser.parseUpdate(Parser.java:679)
+	at org.h2.command.Parser.parsePrepared(Parser.java:423)
+	at org.h2.command.Parser.parse(Parser.java:275)
+	at org.h2.command.Parser.parse(Parser.java:247)
+	at org.h2.command.Parser.prepare(Parser.java:201)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1056)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:165)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:153)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1004)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:970)
+	at org.h2.server.web.WebThread.process(WebThread.java:166)
+	at org.h2.server.web.WebThread.run(WebThread.java:93)
+	at java.lang.Thread.run(Unknown Source)

@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+<title>WoT Error Page</title>
+<link href="wallstyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="wallbody">
+<center><h1 class="walltitle">WoT Error Page</h1></center>
+<br>
+<div class="wallerror">
+<p>The following errors have ben encountered:</p>
+<blockquote><i>
+#foreach ($message in $theList)
+    <p>$message</p>
+#end
+</i></blockquote>
+</div>
+<center>#if ($goBack)<a href="$goBack">Return</a> | #end <a href="wall">Go to the main page</a></center>
+</body>
+</html>
